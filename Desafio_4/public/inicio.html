@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar productos</title>
+</head>
+<body>
+    <form action="/api/productos" method="POST" class="form">
+        <h2>Agregar productos</h2>
+
+        <p type="Titulo:">
+            <input type="text" name="title" placeholder="Nombre del producto" required></input>
+        </p>
+
+        <p type="Precio:">
+            <input type="text" name="price"  placeholder="Poner precio" required></input>
+        </p>
+
+        <p type="Thumbnail:">
+            <input type="text" name="thumbnail" placeholder="Ingrese el url del producto" required></input>
+        </p>
+
+        <button type="submit">Agregar producto a la lista</button>
+        
+        <div>
+          <span class="fa fa-phone"></span>001 1023 567
+          <span class="fa fa-envelope-o"></span> contact@company.com
+        </div>
+      </form>
+</body>
+</html>
