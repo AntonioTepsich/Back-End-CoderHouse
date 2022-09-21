@@ -1,10 +1,16 @@
+const path = require('path');
 const express = require('express');
 const Contenedor = require("./src/contenedor");
-const contenedor = new Contenedor("productos.js");
+const contenedor = new Contenedor("productos.json");
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencode({extended:true}));
+app.use(express.urlencoded({extended:true}));
+app.use(express.static('public'));
+
+// app.get('/',(req,res) => {
+//     res.sendFile(path.resolve(__dirname, './public/inicio.html'));
+// });
 
 const router = express.Router();
 
